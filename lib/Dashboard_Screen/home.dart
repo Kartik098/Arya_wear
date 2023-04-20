@@ -35,19 +35,29 @@ class _homeState extends State<home> {
        ),
      ]
    ),
-       body: Column(
-         children: [
-           ListView(
-             scrollDirection: Axis.horizontal,
-             children: <Widget>[
-               Image.asset('assets/google.png'),
-               Image.asset('assets/facebook.png'),
-               Image.asset('assets/google.png'),
-               Image.asset('assets/facebook.png'),
-             ],
-           )
+       body: Center(
+         child: Column(
+           children: [
+             Container(
+               height: 150,
+               width: 350,
+               child: ListView(
+                 scrollDirection: Axis.horizontal,
+                 children: [
+                   Container(
+                     margin: EdgeInsets.all(10.0),
+                     child: Image.asset(
+                       'assets/b2.png',
+                       fit: BoxFit.cover,
+                     ),
+                   ),
 
-         ],
+                 ],
+               )
+               ,
+             )
+           ],
+         ),
        ),
     );
   }
