@@ -65,7 +65,8 @@ class _login_screenState extends State<login_screen> {
                               fontSize: 15,
                               color: Colors.black54
                           ),
-                        )
+                        ),
+
 
                       ],
                     ),
