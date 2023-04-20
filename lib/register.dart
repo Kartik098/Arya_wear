@@ -164,7 +164,6 @@ class _register_ScreenState extends State<register_Screen> {
                       ),
                     ),
                     SizedBox(height: 10,),
-
                     Row(
                       children: [
                         SizedBox(width: 20,),

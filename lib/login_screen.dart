@@ -1,4 +1,5 @@
-import 'package:addtocart/register.dart';
+import 'package:AryaWear/register.dart';
+
 import 'package:flutter/material.dart';
 
 import 'Dashboard_Screen/dashboard.dart';
@@ -120,9 +121,10 @@ class _login_screenState extends State<login_screen> {
                         ),
                         onPressed: (){
                           Navigator.push(
-                              context, MaterialPageRoute(builder: (context) =>dashboard()));
+                              context, MaterialPageRoute(builder: (context)
+                          =>dashbord()));
                         },
-                        child: Text('Continue',
+                        child: Text('Login',
                         style: TextStyle(
                           color: Colors.white
                         ),),
