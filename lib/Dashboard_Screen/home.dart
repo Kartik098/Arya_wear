@@ -51,11 +51,9 @@ class _homeState extends State<home> {
                        fit: BoxFit.cover,
                      ),
                    ),
-
                  ],
-               )
-               ,
-             )
+               ),),
+
            ],
          ),
        ),
