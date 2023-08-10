@@ -1,4 +1,5 @@
 import 'package:AryaWear/Dashboard_Screen/clothes_list_page.dart';
+import 'package:AryaWear/Navbar/GlobalNavBar.dart';
 import 'package:flutter/material.dart';
 
 class catagory extends StatefulWidget {
@@ -30,13 +31,11 @@ class _catagoryState extends State<catagory> {
     },
     // Add more items here if needed
   ];
-List<String> categories = ['Category 1', 'Category 2', 'Category 3'];
+  List<String> categories = ['T-shirts', 'Jeans', 'Shirts'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Clothes Category'),
-      ),
+      appBar:GlobalAppBar(pageTitle: "Categories"),
       body: ListView.builder(
         itemCount: clothesData.length,
         itemBuilder: (context, index) {
@@ -48,19 +47,16 @@ List<String> categories = ['Category 1', 'Category 2', 'Category 3'];
 
   Widget _buildClothesCard(Map<String, dynamic> itemData, index) {
     return GestureDetector(
-      
-      onTap:() => {
+      onTap: () => {
         // print('Added to cart: ${itemData['name']}')
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ClothesListPage(category: categories[index]),
-                ),
-              )
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ClothesListPage(category: categories[index]),
+          ),
+        )
       },
-     
       child: Padding(
-        
         padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -76,7 +72,6 @@ List<String> categories = ['Category 1', 'Category 2', 'Category 3'];
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 5),
-            
           ],
         ),
       ),

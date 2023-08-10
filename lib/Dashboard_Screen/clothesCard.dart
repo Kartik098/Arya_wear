@@ -33,6 +33,15 @@ class ClothesCard extends StatelessWidget {
               clothes.price,
               style: TextStyle(fontSize: 16, color: Colors.green),
             ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              onPressed: () {
+                // TODO: Implement the logic to add the item to the cart.
+                // You can use a cart provider or store the cart items in a separate list.
+                print('Added to cart: ${clothes.name}');
+              },
+              child: Text('Add to Cart'),
+            ),
           ],
         ),
       ),

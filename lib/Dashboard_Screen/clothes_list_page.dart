@@ -1,4 +1,5 @@
 import 'package:AryaWear/Dashboard_Screen/clothesCard.dart';
+import 'package:AryaWear/Navbar/GlobalNavBar.dart';
 import 'package:flutter/material.dart';
 
 class Clothes {
@@ -14,6 +15,7 @@ class Clothes {
     required this.imageUrl,
   });
 }
+
 class ClothesListPage extends StatelessWidget {
   final String category;
 
@@ -21,37 +23,37 @@ class ClothesListPage extends StatelessWidget {
   List<Clothes> clothesList = [
     Clothes(
       name: 'T-Shirt 1',
-      category: 'Category 1',
+      category: 'T-shirts',
       price: '\$19.99',
       imageUrl: 'https://example.com/tshirt1.jpg',
     ),
     Clothes(
       name: 'T-Shirt 2',
-      category: 'Category 1',
+      category: 'T-shirts',
       price: '\$22.99',
       imageUrl: 'https://example.com/tshirt2.jpg',
     ),
     Clothes(
       name: 'Jeans 1',
-      category: 'Category 2',
+      category: 'Jeans',
       price: '\$39.99',
       imageUrl: 'https://example.com/jeans1.jpg',
     ),
     Clothes(
       name: 'Jeans 2',
-      category: 'Category 2',
+      category: 'Jeans',
       price: '\$45.99',
       imageUrl: 'https://example.com/jeans2.jpg',
     ),
-        Clothes(
+    Clothes(
       name: 'Shirt 1',
-      category: 'Category 3',
+      category: 'Shirts',
       price: '\$39.99',
       imageUrl: 'https://example.com/jeans1.jpg',
     ),
     Clothes(
       name: 'Shirt 2',
-      category: 'Category 3',
+      category: 'Shirts',
       price: '\$45.99',
       imageUrl: 'https://example.com/jeans2.jpg',
     ),
@@ -66,9 +68,7 @@ class ClothesListPage extends StatelessWidget {
         clothesList.where((clothes) => clothes.category == category).toList();
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text(category),
-      ),
+      appBar:GlobalAppBar(pageTitle: category,),
       body: ListView.builder(
         itemCount: filteredClothes.length,
         itemBuilder: (context, index) {
